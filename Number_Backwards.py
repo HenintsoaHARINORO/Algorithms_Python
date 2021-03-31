@@ -1,11 +1,11 @@
 def Num(n):
-    if n== 0:
+    if n == 0:
         return 0
     else:
         print(n)
-        return Num(n-1)
+        return Num(n - 1)
+
 
 if __name__ == '__main__':
-    n=Num(4)
+    n = Num(4)
     print(n)
-
