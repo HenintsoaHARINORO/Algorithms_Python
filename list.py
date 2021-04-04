@@ -47,6 +47,13 @@ class Node:
         current.setNext(newNode)
         self.length +=1
 
+    def deleteFromBeginning(self):
+        if self.length==0:
+            print("The list is empty")
+        else:
+            self.head=self.head.getNext()
+            self.length -=1
+
 if __name__ == '__main__':
     list = [1, 2, 3, 4]
 
