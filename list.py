@@ -37,23 +37,35 @@ class Node:
             self.head = newNode
         self.length += 1
 
-    def insertAtEnd(self,data):
-        newNode= Node()
+    def insertAtEnd(self, data):
+        newNode = Node()
         newNode.setData(data)
-        current =self.head
+        current = self.head
 
-        while current.getNext() !=None:
-            current=current.getNext()
+        while current.getNext() != None:
+            current = current.getNext()
         current.setNext(newNode)
-        self.length +=1
+        self.length += 1
 
     def deleteFromBeginning(self):
-        if self.length==0:
+        if self.length == 0:
             print("The list is empty")
         else:
-            self.head=self.head.getNext()
-            self.length -=1
+            self.head = self.head.getNext()
+            self.length -= 1
+
+    def deleteLastNode(self):
+        if self.length == 0:
+            print("The list is empty")
+        else:
+            currentNode = self.head
+            previousNode = self.head
+            while currentNode.getNext() != None:
+                previousNode = currentNode
+                currentNode = currentNode.getNext()
+            previousNode.setNext(None)
+            self.length -= 1
+
 
 if __name__ == '__main__':
     list = [1, 2, 3, 4]
-
