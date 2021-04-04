@@ -8,3 +8,7 @@
     -insertion of elements
   *Advantages of Linked Lists:
     -easily to add element
+    
+ #Operation
+  *Insertion at the beginning:point the new node to the first Node of the current linked list,after move the head to the new Node
+  *Insertion at the end:
