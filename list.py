@@ -30,14 +30,23 @@ class Node:
         newNode = Node()
         newNode.setData(data)
 
-        if self.listLength() == 0:
+        if self.length == 0:
             self.head = newNode
         else:
-            newNode.setNext(self, head)
+            newNode.setNext(self.head)
             self.head = newNode
-        self.listLength() + = 1
+        self.length += 1
 
+    def insertAtEnd(self,data):
+        newNode= Node()
+        newNode.setData(data)
+        current =self.head
+
+        while current.getNext() !=None:
+            current=current.getNext()
+        current.setNext(newNode)
+        self.length +=1
 
 if __name__ == '__main__':
     list = [1, 2, 3, 4]
-    print(listLength(list))
+
