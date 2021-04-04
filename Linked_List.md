@@ -11,4 +11,4 @@
     
  #Operation
   *Insertion at the beginning:point the new node to the first Node of the current linked list,after move the head to the new Node
-  *Insertion at the end:
+  *Insertion at the end:use loop to get till the end ,when you arrive at the end of the node,point it to the New Node and add one to the length of the list
