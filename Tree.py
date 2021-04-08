@@ -15,3 +15,11 @@ class BinaryTreeNode:
 
     def getRight(self):
         return self.right
+
+    def preorderRecursive(root, result):
+        if not root:
+            return
+        result.append(root.data)
+        preorderRecursive(root.left, result)
+        preorderRecursive(root.right, result)
+
