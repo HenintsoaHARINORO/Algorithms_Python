@@ -31,3 +31,13 @@ class BinaryTree(object):
 
     def getRootVal(self):
         return self.key
+
+
+if __name__ == '__main__':
+    r = BinaryTree('a')
+    h = r.getRootVal()
+    print(h)
+    r.getLeftChild()
+    r.insertLeft('b')
+    g = r.getLeftChild().getRootVal()
+    print(g)
