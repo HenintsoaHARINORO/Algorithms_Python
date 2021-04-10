@@ -7,3 +7,12 @@
  removal of existing item in the front
  Enqueue
  Dequeue
+ 
+ ##Priority
+ The highest priority items are the front of the queue
+ And the lowest are at the back
+ #Binary heap
+ min heap:the smallest key at the front
+ max heap:the largest key 
+ 
+ 

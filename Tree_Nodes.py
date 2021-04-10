@@ -41,15 +41,15 @@ class BinaryTree(object):
 
     def postorder(tree):
         if tree != None:
-            postorder(tree.getLeftChild())
-            postorder(tree.getRightChild())
+            tree.postorder(tree.getLeftChild())
+            tree.postorder(tree.getRightChild())
             print(tree.getRootVal())
 
     def inorder(tree):
         if tree != None:
-            inorder(tree.getLeftChild())
+            tree.inorder(tree.getLeftChild())
             print(tree.getRootVal())
-            inorder(tree.getRightChild())
+            tree.inorder(tree.getRightChild())
 
 
 
@@ -61,4 +61,5 @@ if __name__ == '__main__':
     r.getLeftChild()
     r.insertLeft('b')
     g = r.getLeftChild().getRootVal()
-    print(g)
+   
+    print(i)
