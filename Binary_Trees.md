@@ -8,3 +8,5 @@
  -Complete Binary Tree: 
 #Balanced Binary Tree:
  has the same number of nodes in the left and right subtrees
+ left child:2*p
+ right child:2*p +1
