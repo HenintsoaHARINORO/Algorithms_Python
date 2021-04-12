@@ -6,3 +6,4 @@
  In order to keep the heap structure,we need to re arrange the heap.
  ##The parent element must be the minimum items
  So we need to compare and swap some items if it is necessary
+ The minimum value in a tree must be the root of the tree
