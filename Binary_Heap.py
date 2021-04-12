@@ -10,3 +10,8 @@ class BinHeap:
                 self.heapList[i // 2] = self.heapList[i]
                 self.heapList[i] = tmp
             i = i // 2  # i percolates to a new level of the tree
+
+    def insert(self, k):
+        self.heapList.append(k)
+        self.currentSize = self.currentSize + 1
+        self.percolateUp(self.currentSize)
