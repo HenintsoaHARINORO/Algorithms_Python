@@ -1,8 +1,8 @@
-def print_hi(name):
-     print(f'Hi, {name}')
+def print_hi():
+     print(11//2)
 
 
 if __name__ == '__main__':
-    name = input("Your name please")
-    print_hi(name)
+
+    print_hi()
 
