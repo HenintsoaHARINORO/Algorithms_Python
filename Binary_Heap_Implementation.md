@@ -7,3 +7,8 @@
  ##The parent element must be the minimum items
  So we need to compare and swap some items if it is necessary
  The minimum value in a tree must be the root of the tree
+ 
+ ##Deletion of the minimum value(the root)
+ -Remove the root
+ -put the last item to the root position
+ -then swap if it is necessary
