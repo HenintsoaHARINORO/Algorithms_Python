@@ -17,20 +17,23 @@ def finder(arr1, arr2):
 # num2 first number of the second array
 def finder2(arr1, arr2):
     d = collections.defaultdict(int)  # key is in the dictionary,default dictionary
-    for num in arr2: # how many times an element shows up
+    for num in arr2:  # how many times an element shows up
         d[num] += 1
     for num in arr1:
         if d[num] == 0:
-           print(num)
+            print(num)
         else:
             d[num] -= 1
-def finder3(arr1,arr2):
-    result=0
 
-    #Perform an XOR between the numbers in the arrays
-    for num in arr1+arr2: #concatenate the arrays
-        result^=num
+
+def finder3(arr1, arr2):
+    result = 0
+
+    # Perform an XOR between the numbers in the arrays
+    for num in arr1 + arr2:  # concatenate the arrays
+        result ^= num
     print(result)
+
 
 if __name__ == '__main__':
     arr1 = [1, 2, 3, 4, 5, 6, 7]
