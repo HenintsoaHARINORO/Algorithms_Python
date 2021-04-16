@@ -7,4 +7,6 @@ The end opposite the top is the "base"
 #Newer items are near the top while older items are near the base
 
 #Push: for insertion
-#Pop : for deletion
+#Pop : for removing item from the stack
+#Peek: return the item from the top of the stack without removing it
+
