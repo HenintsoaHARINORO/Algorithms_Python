@@ -19,7 +19,8 @@ local variables
 ##A call stack:
 It is an abstract data type that stores information about the active subroutines,methods,functions of a computer program
 #Stack heap
-no size limits
+-also in the RAM
+-no size limits
 -low access because of pointers
 it is not managed automatically
 -reference types and objects are on the heap(Java)
