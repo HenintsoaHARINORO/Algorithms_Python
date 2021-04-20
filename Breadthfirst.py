@@ -24,7 +24,7 @@ def search(name):
 if __name__ == '__main__':
     graph = {}
     graph["me"] = ["alice", "bobm", "claire"]
-    graph["bob"] = ["anuj", "peggy"]
+    graph["bobm"] = ["anuj", "peggy"]
     graph["alice"] = ["peggy"]
     graph["claire"] = ["thom", "jonny"]
     graph["anuj"] = []
