@@ -9,3 +9,7 @@ weights is called an unweighted graph.
 
  -shortest path in an unweighted graph: breadth-first search
  -shortest path in a weighted graph: Dijkstra’s algorithm.
+ 
+ - you can’t use negative-weight edges
+with Dijkstra’s algorithm
+-negative weight:Bellman-Ford algorithm
