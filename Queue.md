@@ -15,4 +15,7 @@
  min heap:the smallest key at the front
  max heap:the largest key 
  
- 
+ #enqueue
+ - add a new item to the rear of the queue
+ #dequeue term describes 
+ -removing the front item from the queue.
