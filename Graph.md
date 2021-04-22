@@ -10,3 +10,5 @@ A(i,j):1 if there is a connection between node i and node j
 
 ##Edge list representation
 -create a Vertex class to store the neighbors(nodes) accordingly
+
+- a tree structure must be connected and can never have loops while in the graph there are no such restrictions.
