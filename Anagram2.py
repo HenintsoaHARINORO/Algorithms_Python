@@ -11,19 +11,19 @@ def anagram2(s1,s2):
             count[letter] += 1
         else:
             count[letter] = 1
-    print(count)
+    return count
     for letter in s2:
         if letter in count:
            count[letter] -= 1
         else:
             count[letter] = 1
-    print(count)
+    return count
     for k in count:
         if count[k] != 0:
-          print(False)
+          return False
 
-    print(True)
+    return True
 
 
 if __name__ == '__main__':
-    anagram2('cat',"tac")
+    print(anagram2('cat',"tac"))
