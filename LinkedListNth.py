@@ -27,7 +27,7 @@ if __name__ == "__main__":
     d = Node(4)
     e = Node(5)
 
-    a.nextnode = b
-    b.nextnode = c
-    c.nextnode = d
-    d.nextnode = e
+    a.nextNode = b
+    b.nextNode = c
+    c.nextNode = d
+    d.nextNode = e
