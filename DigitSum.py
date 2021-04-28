@@ -1,8 +1,10 @@
+memo = {}
 def sum_func(n):
     if n == 0:
         return 0
-    else:
+    if not n in memo:
         num= n %10
         num1= n//10
-        return  num+sum_func(num1)
+        memo[n]=num+sum_func(num1)
+    return memo[n]
 print(sum_func(20))
