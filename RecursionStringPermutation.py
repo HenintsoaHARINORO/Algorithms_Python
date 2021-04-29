@@ -1,7 +1,7 @@
 def permute(s):
     output = []
 
-    if len(s)<=1:
+    if len(s)==1:
         output = [s]
     else:
         for i , let in enumerate(s):
