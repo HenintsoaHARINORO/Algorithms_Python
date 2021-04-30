@@ -9,9 +9,7 @@ def guessing_num(lower,upper):
 # the lower and upper
  x = random.randint(lower, upper)
  GuessingNumber = round(math.log(upper - lower + 1, 2))
- print("\n\tYou've only ",
-      GuessingNumber,
-      " chances to guess the integer!\n")
+ print("\n\tYou've only ",GuessingNumber," chances to guess the integer!\n")
 
 # Initializing the number of guesses.
  count = 0
