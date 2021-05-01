@@ -23,3 +23,10 @@ def levelOrderPrint(tree):
             if node.right is not None:
                 temp.append(tree.right)
             queue = temp
+
+root  = Node(2)
+root.left = Node(1)
+root.right = Node(3)
+
+
+levelOrderPrint(root)
