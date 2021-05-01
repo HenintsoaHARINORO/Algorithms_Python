@@ -1,3 +1,4 @@
+import collections
 from collections import deque
 
 
@@ -24,15 +25,16 @@ def levelOrderPrint(tree):
                 temp.append(tree.right)
             queue = temp
 
+
 def levelOrderPrint2(tree):
     if not tree:
         return
-    nodes = deque([tree])
-    currentCount , nextCount = 1, 0
+    nodes =collections.deque([tree])
+    currentCount, nextCount = 1, 0
     while len(nodes) != 0:
         currentNode = nodes.popleft()
-        currentNode -= 1
-        print(currentNode.value)
+        currentCount -= 1
+        print(currentNode.value,)
         if currentNode.left:
             nodes.append(currentNode.left)
             nextCount += 1
@@ -40,13 +42,13 @@ def levelOrderPrint2(tree):
             nodes.append(currentNode.right)
             nextCount += 1
         if currentCount == 0:
-            print('\n',currentCount,nextCount=nextCount,currentCount)
+            print('\n',
+                  currentCount, nextCount=nextCount
+                  , currentCount)
 
 
-
-root  = Node(2)
+root = Node(2)
 root.left = Node(1)
 root.right = Node(3)
-
 
 levelOrderPrint(root)
