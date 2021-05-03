@@ -21,6 +21,13 @@ def bfs_paths(graph, start, goal):
                 queue.append((next, path + [next]))
 
 
+def shortest_path(graph, start, goal):  # the shortest path is always the first from bfs path
+    try:
+        return next(bfs_paths(graph, start, goal))
+    except StopIteration:
+        return None
+
+
 if __name__ == '__main__':
     graph = {'A': set(['B', 'C']),
              'B': set(['A', 'D', 'E']),
@@ -28,5 +35,6 @@ if __name__ == '__main__':
              'D': set(['B']),
              'E': set(['B', 'F']),
              'F': set(['C', 'E'])}
-    print(bfs(graph, 'A'))
-   # print(list(bfs_paths(graph, 'A', 'D')))
+    # print(bfs(graph, 'A'))
+    print(list(bfs_paths(graph, 'A', 'D')))
+    print(shortest_path(graph, 'A', 'D'))
