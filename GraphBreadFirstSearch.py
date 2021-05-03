@@ -1,10 +1,12 @@
 def bfs(graph, start):
-    visited, queue = set(), [start]
+    visited = set()
+    queue = [start]
     while queue:
         vertex = queue.pop(0)
         if vertex not in visited:
             visited.add(vertex)
             queue.extend(graph[vertex] - visited)
+            print(queue)
     return visited
 
 
@@ -27,4 +29,4 @@ if __name__ == '__main__':
              'E': set(['B', 'F']),
              'F': set(['C', 'E'])}
     print(bfs(graph, 'A'))
-    print(list(bfs_paths(graph, 'A', 'D')))
+   # print(list(bfs_paths(graph, 'A', 'D')))
