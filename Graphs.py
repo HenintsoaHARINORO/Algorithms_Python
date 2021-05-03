@@ -33,3 +33,7 @@ class Graph:
         if dest not in self.nodes:
             self.add_node(dest)
         self.nodes[source].adjacent[self.nodes[dest]] = weight
+
+g = Graph()
+g.add_edge(0,1,5)
+print(g.nodes)
