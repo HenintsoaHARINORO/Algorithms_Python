@@ -12,7 +12,7 @@ class Node:
     def __init__(self, num):
         self.num = num
         self.visit_state = State.unvisited
-        self.adjacent = OrderedDict()
+        self.adjacent = OrderedDict()  # neighbors
 
     def __str__(self):
         return str(self.num)
@@ -34,6 +34,7 @@ class Graph:
             self.add_node(dest)
         self.nodes[source].adjacent[self.nodes[dest]] = weight
 
+
 g = Graph()
-g.add_edge(0,1,5)
+g.add_edge(0, 1, 5)
 print(g.nodes)
