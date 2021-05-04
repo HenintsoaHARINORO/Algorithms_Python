@@ -120,6 +120,50 @@ class BinarySearchTree:
     def __delitem__(self, key):
         self.delete(key)
 
+    def spliceOut(self):
+        if self.isLeaf():
+            if self.isLeftChild():
+                self.parent.leftChild = None
+            else:
+                self.parent.rightChild = None
+        elif self.hasAnyChildren():
+            if self.hasLeftChild():
+                if self.isLeftChild():
+                    self.parent.leftChild = self.leftChild
+                else:
+                    self.parent.rightChild = self.leftChild
+                    self.leftChild.parent = self.parent
+        else:
+            if self.isLeftChild():
+                self.parent.leftChild = self.rightChild
+            else:
+                self.parent.rightChild = self.rightChild
+                self.rightChild.parent = self.parent
+
+    def findSuccessor(self):
+
+        succ = None
+        if self.hasRightChild():
+            succ = self.rightChild.findMin()
+        else:
+            if self.parent:
+
+                if self.isLeftChild():
+
+                    succ = self.parent
+                else:
+                    self.parent.rightChild = None
+                    succ = self.parent.findSuccessor()
+                    self.parent.rightChild = self
+        return succ
+
+    def findMin(self):
+
+        current = self
+        while current.hasLeftChild():
+            current = current.leftChild
+        return current
+
     def remove(self, currentNode):
         if currentNode.isLeaf():  # leaf:has no children
             if currentNode == currentNode.parent.leftChild:
