@@ -22,7 +22,7 @@ class TreeNode:
         return not self.parent
 
     def isLeaf(self):
-        return  not (self.rightChild or self.leftChild)
+        return not (self.rightChild or self.leftChild)
 
     def hasAnyChildren(self):
         return self.rightChild or self.leftChild
@@ -30,7 +30,7 @@ class TreeNode:
     def hasBothChildren(self):
         return self.rightChild and self.leftChild
 
-    def replaceNodeData(self,key,value,lc,rc):
+    def replaceNodeData(self, key, value, lc, rc):
         self.key = key
         self.payload = value
         self.leftChild = lc
@@ -39,3 +39,19 @@ class TreeNode:
             self.leftChild.parent = self
         if self.hasRightChild():
             self.rightChild.parent = self
+
+class BinarySearchTree:
+    def __init__(self):
+        self.root =None
+        self.size = 0
+    def length(self):
+        return self.size
+    def __len__(self):
+        return self.size
+    def put(self,key,val):
+        if self.root: # check if the Tree has a root
+            self._put(key,val,self.root)
+        else: # else create a TreeNode and pu it as a root
+            self.root =TreeNode(key,val)
+        self.size +=1 # increment the size of the Tree
+
