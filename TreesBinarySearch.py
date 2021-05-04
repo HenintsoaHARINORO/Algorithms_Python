@@ -40,18 +40,33 @@ class TreeNode:
         if self.hasRightChild():
             self.rightChild.parent = self
 
+
 class BinarySearchTree:
     def __init__(self):
-        self.root =None
+        self.root = None
         self.size = 0
+
     def length(self):
         return self.size
+
     def __len__(self):
         return self.size
-    def put(self,key,val):
-        if self.root: # check if the Tree has a root
-            self._put(key,val,self.root)
-        else: # else create a TreeNode and pu it as a root
-            self.root =TreeNode(key,val)
-        self.size +=1 # increment the size of the Tree
 
+    def put(self, key, val):
+        if self.root:  # check if the Tree has a root
+            self._put(key, val, self.root)
+        else:  # else create a TreeNode and pu it as a root
+            self.root = TreeNode(key, val)
+        self.size += 1  # increment the size of the Tree
+
+    def _put(self, key, val, currentNode):
+        if key < currentNode.key:
+            if currentNode.hasLeftChild():
+                self._put(key, val, currentNode.leftChild)
+            else:
+                currentNode.leftChild = TreeNode(key, val, parent=currentNode)
+        else:
+            if currentNode.hasRightChild():
+                self._put(key, val, currentNode.rightChild)
+            else:
+                currentNode.rightChild = TreeNode(key, val, parent=currentNode)
