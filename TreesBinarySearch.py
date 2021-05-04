@@ -17,3 +17,25 @@ class TreeNode:
 
     def isRightChild(self):
         return self.parent and self.parent.rightChild == self
+
+    def isRoot(self):
+        return not self.parent
+
+    def isLeaf(self):
+        return  not (self.rightChild or self.leftChild)
+
+    def hasAnyChildren(self):
+        return self.rightChild or self.leftChild
+
+    def hasBothChildren(self):
+        return self.rightChild and self.leftChild
+
+    def replaceNodeData(self,key,value,lc,rc):
+        self.key = key
+        self.payload = value
+        self.leftChild = lc
+        self.rightChild = rc
+        if self.hasLeftChild():
+            self.leftChild.parent = self
+        if self.hasRightChild():
+            self.rightChild.parent = self
