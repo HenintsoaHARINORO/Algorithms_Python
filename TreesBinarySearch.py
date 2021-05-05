@@ -203,8 +203,7 @@ mytree[3] = "red"
 mytree[4] = "blue"
 mytree[6] = "yellow"
 mytree[2] = "at"
-mytree.put(5,4)
-
+mytree.put(5, 4)
 
 print(mytree[6])
 print(mytree[2])
