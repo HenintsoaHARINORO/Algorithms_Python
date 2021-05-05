@@ -29,12 +29,13 @@ def levelOrderPrint(tree):
 def levelOrderPrint2(tree):
     if not tree:
         return
-    nodes =collections.deque([tree])
-    currentCount, nextCount = 1, 0
+    nodes = collections.deque([tree])
+    currentCount = 1
+    nextCount = 0
     while len(nodes) != 0:
         currentNode = nodes.popleft()
         currentCount -= 1
-        print(currentNode.value,)
+        print(currentNode.value, )
         if currentNode.left:
             nodes.append(currentNode.left)
             nextCount += 1
@@ -42,13 +43,13 @@ def levelOrderPrint2(tree):
             nodes.append(currentNode.right)
             nextCount += 1
         if currentCount == 0:
-            print('\n',
-                  currentCount, nextCount=nextCount
-                  , currentCount)
+            currentCount = nextCount,
+            nextCount = currentCount
+            print('\n', currentCount, nextCount)
 
 
 root = Node(2)
 root.left = Node(1)
 root.right = Node(3)
 
-levelOrderPrint(root)
+levelOrderPrint2(root)
