@@ -4,22 +4,26 @@ class BinaryTreeNode:
         self.left = None
         self.right = None
 
-    def setData(self, data):
-        self.data = data
 
-    def getData(self):
-        return self.data
+def setData(self, data):
+    self.data = data
 
-    def getLeft(self):
-        return self.left
 
-    def getRight(self):
-        return self.right
+def getData(self):
+    return self.data
 
-    def preorderRecursive(root, result):
-        if not root:
-            return
-        result.append(root.data)
-        preorderRecursive(root.left, result)
-        preorderRecursive(root.right, result)
 
+def getLeft(self):
+    return self.left
+
+
+def getRight(self):
+    return self.right
+
+
+def preorderRecursive(root, result):
+    if not root:
+        return
+    result.append(root.data)
+    preorderRecursive(root.left, result)
+    preorderRecursive(root.right, result)
