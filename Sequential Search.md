@@ -16,3 +16,7 @@ We should o to each element to find the target
 
 ##Ordered list
 We only have to search until we reach an element which is a match or we search an element which is greater than the target
+* item is present or not:
+   Best Case= 1
+  Worst Case = n (at the last element)
+  Average case = n/2
