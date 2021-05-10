@@ -10,3 +10,9 @@ mapping between an item and the slot where that item belongs in the hash table
 ##Collision(clash):
 two items that would result in the same location
 * 44% 11 and 77%11
+
+##Collision resolution
+
+##Rehashing:
+looking for another slot after a collision
+##Quadratic probing
