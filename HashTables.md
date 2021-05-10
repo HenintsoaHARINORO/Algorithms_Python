@@ -6,3 +6,7 @@ mapping between an item and the slot where that item belongs in the hash table
 
 ##h(item)= item%(preassigned hash table)
 * When we want to search for an item ,we simply use the hash function to compute the slot name
+
+##Collision(clash):
+two items that would result in the same location
+* 44% 11 and 77%11
