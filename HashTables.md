@@ -15,4 +15,8 @@ two items that would result in the same location
 
 ##Rehashing:
 looking for another slot after a collision
-##Quadratic probing
+##Quadratic probing:
+A variation of the linear probing
+
+##Chaining:
+allows many items to exist at the same location in the hash table
