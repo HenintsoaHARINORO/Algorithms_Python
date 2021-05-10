@@ -18,7 +18,6 @@ class HashTable(object):
                 while self.slots[nextslot] != None and self.slots[nextslot] != key:
                     nextslot = self.rehash(nextslot, len(self.slots))
 
-
                 if self.slots[nextslot] == None:
                     self.slots[nextslot] = key
                     self.data[nextslot] = data
@@ -28,6 +27,7 @@ class HashTable(object):
                     self.data[nextslot] = data
 
     def hashfunction(self, key, size):
-       return  key%size
-    def rehash(self,oldhash,size):
-       return (oldhash + 1)%size # find the new slot
+        return key % size
+
+    def rehash(self, oldhash, size):
+        return (oldhash + 1) % size  # find the new slot
