@@ -18,8 +18,8 @@ def partition(array, first, last):
     while not done:
         while leftmark <= rightmark and array[leftmark] <= pivotvalue:
             leftmark += 1
-        while array[rightmark] >= pivotvalue and rightmark >=leftmark:
-            rightmark +=1
+        while array[rightmark] >= pivotvalue and rightmark >= leftmark:
+            rightmark -= 1
         if rightmark < leftmark:
             done = True
         else:
@@ -31,3 +31,8 @@ def partition(array, first, last):
     array[rightmark] = temp
 
     return rightmark
+
+
+array = [2, 1, 45, 67, 12, -33, 0]
+quick_sort(array)
+print(array)
