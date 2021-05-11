@@ -6,4 +6,10 @@ def quick_sort_help(array,first,last):
         quick_sort_help(array,first,splitpoint - 1)
         quick_sort_help(array,splitpoint + 1,last)
 def partition(array,,first,last):
+    pivotvalue = array[first]
+    leftmark = first + 1
+    rightmark = last
+
+    done = False
+    while not done:
 
