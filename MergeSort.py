@@ -1,6 +1,6 @@
 def merge_sort(array):
     if len(array) > 1:
-        mid = len(array) / 2
+        mid = len(array) // 2
         lefthalf = array[:mid]
         righthalf = array[mid:]
         merge_sort(lefthalf)
@@ -17,16 +17,19 @@ def merge_sort(array):
             else:
                 array[k] = righthalf[j]
                 j += 1
+            k +=1
+
         while i < len(lefthalf):
             array[k] = lefthalf[i]
-            i += 1
-            k += 1
+            i = i + 1
+            k = k + 1
+
         while j < len(righthalf):
             array[k] = righthalf[j]
-            j += 1
-            k += 1
+            j = j + 1
+            k = k + 1
 
 
-array = [11, -3, 0, 45, 98, 0]
+array = [11,2,5,4,7,6,8,1,23]
 merge_sort(array)
 print(array)
