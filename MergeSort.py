@@ -10,20 +10,23 @@ def merge_sort(array):
         j = 0
         k = 0
 
-        while i<len(lefthalf) and j<len(righthalf):
-            if lefthalf[i] <righthalf[j]:
+        while i < len(lefthalf) and j < len(righthalf):
+            if lefthalf[i] < righthalf[j]:
                 array[k] = lefthalf[i]
-                i +=1
+                i += 1
             else:
                 array[k] = righthalf[j]
-                j +=1
-        while i<len(lefthalf):
+                j += 1
+        while i < len(lefthalf):
             array[k] = lefthalf[i]
-            i +=1
-            k +=1
-        while j<len(righthalf):
+            i += 1
+            k += 1
+        while j < len(righthalf):
             array[k] = righthalf[j]
             j += 1
             k += 1
 
 
+array = [11, -3, 0, 45, 98, 0]
+merge_sort(array)
+print(array)
