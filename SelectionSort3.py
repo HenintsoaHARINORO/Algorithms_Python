@@ -9,3 +9,6 @@ def selectionSort(array):
         array[positionOfMax] = temp
 
 
+array = [1, 0, -3, 4, 65]
+selectionSort(array)
+print(array)
