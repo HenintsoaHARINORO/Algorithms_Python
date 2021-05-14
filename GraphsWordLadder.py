@@ -30,4 +30,13 @@ class Graph:
         self.vertList[key] = newVertex
         return newVertex
 
-    def getVertex(self,n):
+    def getVertex(self, n):
+        if n in self.vertList:
+            return self.vertList[n]
+        else:
+            return None
+
+    def __contains__(self, n):
+        return n in self.vertList
+
+    def addEdge(self, f, t, cost=0):
