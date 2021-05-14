@@ -40,3 +40,14 @@ class Graph:
         return n in self.vertList
 
     def addEdge(self, f, t, cost=0):
+        if f not in self.vertList:
+            nv = self.addVertex(f)
+        if t not in self.vertList:
+            nv = self.addVertex(t)
+        self.vertList[f].addNeighbor(self.vertList[t], cost)
+
+    def getVertices(self):
+        return self.vertList.keys()
+
+    def __iter__(self):
+        return iter(self.vertList.values())
