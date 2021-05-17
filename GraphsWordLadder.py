@@ -68,3 +68,9 @@ class Graph:
                 else:
                     d[bucket] = [word]
 
+        for bucket in d.keys():
+            for word1 in d[bucket]:
+                for word2 in d[bucket]:
+                    if word1 != word2:
+                        g.addEdge(word1,word2)
+        return  g
