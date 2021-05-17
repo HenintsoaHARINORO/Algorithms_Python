@@ -53,3 +53,9 @@ class Graph:
         return iter(self.vertList.values())
 
     def  buildGraph(wordFile):
+        d = {}
+        g = Graph()
+
+        wfile = open(wordFile, 'r')
+        for line in wfile:
+            print(line)
