@@ -52,7 +52,7 @@ class Graph:
     def __iter__(self):
         return iter(self.vertList.values())
 
-    def  buildGraph(wordFile):
+    def buildGraph(wordFile):
         d = {}
         g = Graph()
 
@@ -62,7 +62,7 @@ class Graph:
             word = line[:-1]
             print(word)
             for i in range(len(word)):
-                bucket = word[:i] + '_' + word[i+1:]
+                bucket = word[:i] + '_' + word[i + 1:]
                 if bucket in d:
                     d[bucket].append(word)
                 else:
@@ -72,5 +72,5 @@ class Graph:
             for word1 in d[bucket]:
                 for word2 in d[bucket]:
                     if word1 != word2:
-                        g.addEdge(word1,word2)
-        return  g
+                        g.addEdge(word1, word2)
+        return g
