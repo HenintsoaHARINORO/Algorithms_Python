@@ -1,0 +1,4 @@
+from heapq import heappop, heappush, heapify
+
+heap = []
+nums = [12, 3, -2, 6, 4, 8, 9]
