@@ -8,3 +8,10 @@
 ##Removing an item
 * arbitrary node = O(N)
 * exact node = O(logN)
+
+##Running Time
+* Memory Complexity:O(N)
+* find the minimum/maximum:O(1)
+ heapArray[0]
+* insertion
+ 
