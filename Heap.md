@@ -5,3 +5,6 @@
 
 ## Heap Properties:
 * complete
+##Removing an item
+* arbitrary node = O(N)
+* exact node = O(logN)
