@@ -4,13 +4,14 @@ def shellSort(array):
     while sublistCount > 0:
         for start in range(sublistCount):
             gap_insertion_sort(array, start, sublistCount)
-
+        print("After increments of size",sublistCount)
+        print("The list is ",array)
         sublistCount = sublistCount // 2
 
 
 def gap_insertion_sort(array, start, gap):
     for i in range(start + gap, len(array), gap):
-        print(i)
+
         currentValue = array[i]
         position = i
 
