@@ -1,9 +1,9 @@
 def insertion_sort(array):
-    for i in range(1, len(array)):
+    for i in range(1, len(array)): # 1 to n-1
         currentValue = array[i]
         position = i
         while position > 0 and array[position - 1] > currentValue:
-            array[position] = array[position - 1]
+            array[position] = array[position - 1] # shift operation
             position = position - 1
 
         array[position] = currentValue
@@ -11,5 +11,7 @@ def insertion_sort(array):
 
 if __name__ == "__main__":
     array = [3, 4, 0, -1, 2, 123]
+
+
     insertion_sort(array)
     print(array)
