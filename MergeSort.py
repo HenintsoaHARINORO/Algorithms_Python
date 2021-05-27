@@ -10,26 +10,26 @@ def merge_sort(array):
         j = 0
         k = 0
 
-        while i < len(lefthalf) and j < len(righthalf):
+        while i < len(lefthalf) and j < len(righthalf):  # check the middle
             if lefthalf[i] < righthalf[j]:
                 array[k] = lefthalf[i]
                 i += 1
             else:
                 array[k] = righthalf[j]
                 j += 1
-            k +=1
+            k += 1
 
-        while i < len(lefthalf):
+        while i < len(lefthalf):  # the lefthalf
             array[k] = lefthalf[i]
-            i = i + 1
-            k = k + 1
+            i += 1
+            k += 1
 
-        while j < len(righthalf):
+        while j < len(righthalf):  # the right half
             array[k] = righthalf[j]
-            j = j + 1
-            k = k + 1
+            j += 1
+            k += 1
 
 
-array = [11,2,5,4,7,6,8,1,23]
+array = [11, 2, 5, 4, 7, 6, 8, 1, 23]
 merge_sort(array)
 print(array)
