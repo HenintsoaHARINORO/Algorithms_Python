@@ -6,9 +6,9 @@ def merge_sort(array):
         merge_sort(lefthalf)
         merge_sort(righthalf)
 
-        i = 0
-        j = 0
-        k = 0
+        i = 0  # for the lefthalf
+        j = 0  # for the righthalf
+        k = 0  # index of the final array
 
         while i < len(lefthalf) and j < len(righthalf):  # check the middle
             if lefthalf[i] < righthalf[j]:
@@ -28,8 +28,9 @@ def merge_sort(array):
             array[k] = righthalf[j]
             j += 1
             k += 1
+    print("Merging",array)
 
 
-array = [11, 2, 5, 4, 7, 6, 8, 1, 23]
+array = [11, 2, 5, 4, 7, 6]
 merge_sort(array)
 print(array)
