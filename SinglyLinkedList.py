@@ -9,3 +9,6 @@ if __name__=="__main__":
     c = Node(1)
     a.nextnode = b
     b.nextnode = c
+
+    print(a.value)
+    print(a.nextnode.value)
