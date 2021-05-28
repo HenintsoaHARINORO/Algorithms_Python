@@ -27,4 +27,11 @@ if __name__ == "__main__":
     b.nextNode = c
     c.nextNode = a  # cycle
 
+    x = Node(1)
+    y = Node(2)
+    z = Node(3)
+
+    x.nextNode = y
+    y.nextNode = z
     print(cycle_check(c))
+    print(cycle_check(z))
