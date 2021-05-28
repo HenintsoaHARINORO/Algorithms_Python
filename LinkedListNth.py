@@ -33,4 +33,4 @@ if __name__ == "__main__":
     c.nextNode = d
     d.nextNode = e
 
-    print(nth_to_last_node(1,a).value)
+    print(nth_to_last_node(2, a).value)  # the second to last node
