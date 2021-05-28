@@ -7,13 +7,13 @@ class Node(object):
 def reverse(head):
     current = head
     previous = None
-    next = None
+    nextNode = None
     while current:
-        next = current.nextNode
+        nextNode = current.nextNode
         current.nextNode = previous
 
         previous = current
-        current = next
+        current = nextNode
     return previous
 
 
