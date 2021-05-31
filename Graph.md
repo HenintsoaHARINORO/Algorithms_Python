@@ -16,3 +16,7 @@ A(i,j):1 if there is a connection between node i and node j
 #A Vertex:"Node"
 It can have a name:"key"
 And also an additional information:"payload"
+
+#An Edge:
+ ## connects two vertices
+ * may be one-way(directed graph or a digraph) or two-way
