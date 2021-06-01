@@ -3,16 +3,16 @@ from enum import Enum
 
 
 class State(Enum):
-    unvisited = 1
-    visited = 2
-    visiting = 3
+    unvisited = 1  # white
+    visited = 2  # black
+    visiting = 3  # gray
 
 
 class Node:
     def __init__(self, num):
         self.num = num
         self.visit_state = State.unvisited
-        self.adjacent = OrderedDict()  # neighbors
+        self.adjacent = OrderedDict()  # neighbors ,OrderDict is a dict that remembers the order that keys were first inserted
 
     def __str__(self):
         return str(self.num)
