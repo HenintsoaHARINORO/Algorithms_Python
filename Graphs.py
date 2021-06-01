@@ -12,10 +12,10 @@ class Node:
     def __init__(self, num):
         self.num = num
         self.visit_state = State.unvisited
-        self.adjacent = OrderedDict()  # neighbors ,OrderDict is a dict that remembers the order that keys were first inserted
+        self.adjacent = OrderedDict()  # key = node , value = weight, neighbors ,OrderDict is a dict that remembers the order that keys were first inserted
 
     def __str__(self):
-        return str(self.num)
+        return str(self.num) # number of the node
 
 
 class Graph:
